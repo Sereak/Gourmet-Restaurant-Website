@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #B87730;
+  --secondary-color: #843619;
+  --background-color:#000000;
+  --text1-color: #FFFFFF;
+  --text2-color: #fafafab7;
+  --button1-color: #B87730;
+  --button2-color: #ff8400;
+  --other-color: #748991;
+}
+
+
+/* -------------------Main Section------------------- */
+.MainContent{
+  position: relative;
+}
+
+.MainHeaderBlock{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+
+.MainHeader{
+  color: var(--text1-color);
+  @apply mb-4; 
+  @apply font-extrabold;
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+}
+
+.MainSectionP{
+  color: var(--text2-color);
+  @apply mb-4; 
+  @apply font-light;
+}
+
+.HomeImage{
+  width: 100%;
+  height: auto;
+ filter: brightness(40%);
+}
+
+.MenuButton{
+  color: var(--text1-color);
+  @apply px-6; 
+  @apply inline-block; 
+  @apply py-3; 
+  @apply w-full;
+  @apply mr-4;
+  @apply font-extrabold;
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+}
+.MenuButton:hover{
+  color: var(--primary-color);
+}
+
+
+/* -------------------Main Section------------------- */
+/* -------------------Description Section------------------- */
+
+.DescriptionTextContainer{
+  vertical-align:middle;
+}
+
+.DescriptionTextContainer h1{
+  @apply font-extrabold;
+  @apply w-full;
+}
+
+
+.DescriptionTextContainer h2{
+  @apply w-full;
+  color: var(--text2-color);
+}
+
+.Times{
+  color: var(--text2-color);
+}
+
+.DescriptionTextContainer span{
+  @apply font-bold;
+  color: var(--text1-color);
+}
+
+.DescriptionOrderButton{
+  text-align: right;
+}
+
+.OrderButton{
+  color: var(--text1-color);
+  @apply px-6; 
+  @apply inline-block; 
+  @apply py-3; 
+  @apply w-full;
+  @apply mr-4;
+  @apply font-extrabold;
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+  width: fit-content;
+}
+.OrderButton:hover{
+  color: var(--primary-color);
+
+}
+
+.DescriptionImageContainer img{
+  border-radius: 3rem;
+  
+}
+
+.DoorDash {
+  text-align: center;
+  color: var(--primary-color);
+  padding-bottom: 3%;
+}
+/* -------------------Description Section------------------- */
+
+/* -------------------Popular Menu Section------------------- */
+
+
+.PopularMenuHeader h1{
+  @apply font-extrabold;
+  padding-bottom: 5px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.PopularMenuHeader h2{
+  @apply font-light;
+  padding-bottom: 5px;
+  text-align: center;
+  
+}
+
+.PopularMenuButton{
+  text-align: center;
+}
+
+
+
+.Menu-Item{
+  padding: 20px;
+  text-align: center;
+}
+
+.Menu-Item h1{
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+}
+
+
+.MenuButton2{
+  color: var(--text1-color);
+  @apply font-extrabold;
+  background-color: var(--primary-color);
+  padding: 5px 10px 10px 10px;
+  @apply rounded-full;
+}
+.MenuButton2:hover{
+  color: var(--primary-color);
+  background-color: var(--text1-color)
+}
+
+
+/* -------------------Popular Menu Section------------------- */
+
+
+/* -------------------Review Section------------------- */
+
+.ReviewContainer, .PopularMenu{
+padding: 5% 0 5% 0;
+}
+
+.ReviewHeader h1{
+  @apply font-extrabold;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.Review-{
+  text-align: center;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(15px, 1fr));
+
+  padding: 5%;
+}
+.ReviewContent{
+  padding: 0px 10px 0px 10px;
+}
+
+.ReviewImage img{
+  border-radius: 50%;
+}
+
+/* -------------------Review Section------------------- */

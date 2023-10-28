@@ -1,0 +1,403 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #B87730;
+  --secondary-color: #843619;
+  --background-color:#000000;
+  --text1-color: #FFFFFF;
+  --text2-color: #fafafab7;
+  --button1-color: #B87730;
+  --button2-color: #ff8400;
+  --other-color: #748991;
+}
+
+.Page{
+  @apply flex;
+  @apply min-h-screen; 
+  @apply flex-col;
+  background-color: var(--background-color);
+}
+
+.Content{
+  padding: 0 10% 1% 10%;
+}
+
+
+
+h1, p{
+  color:var(--text1-color);
+}
+
+ span, h2{
+  color:var(--text2-color);
+}
+i{
+  color: var(--button1-color);
+}
+
+.ReviewImage{
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.HomeContainer, .MenuContainer{
+    min-height: 90vh; 
+}
+.footer{
+  min-height: 10vh; 
+}
+/* -------------------Navbar------------------- */
+
+.NavSection{
+  @apply fixed;
+  @apply mx-auto;
+  @apply right-0 z-10; 
+  color: var(--text1-color);
+  @apply bg-opacity-100;
+  @apply font-light;
+}
+
+
+.NavContainer{
+  @apply flex; 
+  @apply container ;
+  @apply lg:py-4; 
+  @apply flex-wrap; 
+  @apply justify-between; 
+  @apply px-4; 
+  @apply py-2;
+  text-align: right;
+}
+
+.NavLink{
+  @apply block; 
+  @apply py-2; 
+  @apply pl-3; 
+  @apply pr-4; 
+  color: var(--text1-color);
+  @apply sm:text-xl; 
+  @apply rounded; 
+  @apply md:p-0; 
+}
+.NavLink:hover{
+  color: var(--primary-color);
+}
+.NavOpen{
+  @apply flex; 
+  @apply items-center; 
+  @apply px-3; 
+  @apply py-2; 
+  @apply border; 
+  @apply rounded; 
+  @apply border-slate-200; 
+  @apply text-slate-200;
+}
+
+.NavOpen:hover{
+  color: var(--primary-color);
+  @apply border-white;
+}
+
+
+.NavTextContainer{
+  @apply hidden; 
+}
+
+.NavList{
+  @apply flex; 
+  @apply p-4; 
+  @apply md:p-0; 
+  @apply md:flex-row; 
+  @apply md:space-x-8; 
+  @apply mt-0;
+}
+
+/* -------------------Navbar------------------- */
+
+
+/* -------------------Footer------------------- */
+footer{
+	bottom: 0;
+	background: var(--primary-color);
+	height: auto;
+  text-align: center;
+  position: relative;
+}
+
+.GourmetButton{
+  @apply py-3; 
+  @apply font-bold;
+  color: var(--text1-color);
+}
+
+.GourmetButton:hover{
+  color: var(--button2-color);
+}
+
+.FooterSocials{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  justify-content: space-between;
+}
+
+.FooterContainer i{
+  color: var(--text1-color);
+}
+.FooterContainer i:hover{
+  color: var(--button2-color);
+}
+.FooterContainer p{
+}
+
+.FooterCopyright p{
+  color: var(--text2-color);
+
+}
+/* -------------------Footer------------------- */
+
+/* -------------------Scroll------------------- */
+.scroll{
+  position: fixed;
+  bottom: 18%;
+  border-top: 2rem;
+  right: 5%;
+
+}
+
+.scroll i{
+  color: var(--text1-color);
+  background: var(--primary-color);
+  padding: 10px;
+  border-radius: 2rem;
+}
+
+.scroll i:hover{
+  color: var(--primary-color);
+  background: var(--text1-color);
+  padding: 10px;
+  border-radius: 2rem;
+}
+/* -------------------Scroll------------------- */
+/* ---------------------------------------------------------End Nav,Footer,Extras---------------------------------------------------------  */
+
+/* ---------------------------------------------------------Responsive---------------------------------------------------------  */
+@media(max-width:2800px){
+  .DescriptionImageContainer{
+    height: auto;
+    align-items: center;
+    max-width: 60%;
+    margin: auto;
+  }
+
+  .DescriptionTextContainer{
+    margin-left: 5%;
+  }
+  .Reviews{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+   }
+
+  .DescriptionContainer{
+    display: grid;
+    @apply grid-cols-2;
+    padding: 5% 10% 5% 10%;
+  }
+ 
+  .MenuItems{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+  .NavTextContainer{
+    display: block;
+  }
+  .NavMobileMenu, .NavOverlay{
+    display: none;
+  }
+  
+  .MainContent p{
+    font-size:32px;
+  }
+  .MainHeader {
+    font-size: 75px;
+  }
+
+  .PopularMenuHeader h1, .DescriptionTextContainer h1, .ReviewHeader h1{
+    font-size: 45px;
+  }
+
+  .DescriptionTextContainer h2, .PopularMenuHeader h2, .DescriptionTextContainer p{
+    font-size: 25px;
+  }
+
+  .Menu-Item h1{
+    font-size:19px;
+  }
+  .Menu-Item p{
+    font-size: 17px;
+  }
+
+  .ReviewContent{
+    font-size:15px;
+  }
+  .FooterContainer a{
+    font-size:25px;
+  }
+  .MenuButton, .MenuButton2, .OrderButton{
+    font-size: 23px;
+  }
+  .FooterContainer p{
+    font-size: 13px;
+  }
+}
+
+@media(max-width:1257px){
+  .MainContent p{
+    font-size:25px;
+  }
+  .MainHeader {
+    font-size: 60px;
+  }
+
+  .PopularMenuHeader h1, .DescriptionTextContainer h1, .ReviewHeader h1{
+    font-size: 30px;
+  }
+
+  .DescriptionTextContainer h2, .PopularMenuHeader h2, .DescriptionTextContainer p{
+    font-size:20px;
+  }
+  .Menu-Item h1{
+    font-size:15px;
+  }
+  .Menu-Item p{
+    font-size: 15px;
+  }
+
+  .ReviewContent{
+    font-size:12px;
+  }
+  .FooterContainer a{
+    font-size:20px;
+  }
+  .MenuButton, .MenuButton2, .OrderButton{
+    font-size:18px;
+  }
+
+  .FooterContainer p{
+    font-size:10px;
+  }
+}
+
+@media(max-width:1050px){
+  .DescriptionContainer{
+    display: block;
+  }
+  .DescriptionImageContainer{
+    max-width: 70%;
+  }
+}
+
+
+@media(max-width:850px){
+  .ReviewImage{
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+  .NavList{
+  display: none
+  }
+  .NavTextContainer{
+    display: none;
+  }
+ 
+  .NavOverlay{
+    @apply flex; 
+    @apply flex-col;
+    padding-right: 50%;
+    text-align: right;
+  }
+  .NavMobileMenu{
+    @apply block; 
+  }
+  .MainHeader {
+    font-size: 43px;
+  }
+  .MenuItems{
+    display: block;
+  }
+}
+
+
+@media(max-width:600px){
+  .DescriptionImageContainer{
+    max-width: 80%;
+  }
+  .Reviews{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+   }
+
+   .DescriptionTextContainer{
+    margin-left: 0%;
+   }
+
+  .DescriptionTextContainer h1{
+    text-align: center;
+  }
+  
+  .DescriptionImageContainer img{
+    align-items: center;
+  }
+
+  .DescriptionTextContainer, .DescriptionOrderButton{
+    align-items: center;
+  }
+
+   .MainContent p{
+    font-size:12px;
+  }
+  
+  .MainHeader {
+    font-size: 14px;
+  }
+
+  .PopularMenuHeader h1, .DescriptionTextContainer h1, .ReviewHeader h1{
+    font-size: 30px;
+  }
+
+  .DescriptionTextContainer h2, .PopularMenuHeader h2, .DescriptionTextContainer p{
+    font-size: 20px;
+  }
+  .Menu-Item h1{
+    font-size:15px;
+  }
+  .Menu-Item p{
+    font-size: 13px;
+  }
+
+  .ReviewContent{
+    font-size:7px;
+  }
+  .FooterContainer a{
+    font-size:20px;
+  }
+  .MenuButton, .MenuButton2, .OrderButton{
+    font-size: 10px;
+  }
+
+  .FooterContainer p{
+    font-size: 10px;
+  }
+
+
+.scroll i:hover{
+  color: var(--text1-color);
+  background: var(--primary-color);
+}
+}
+/* ---------------------------------------------------------Responsive---------------------------------------------------------  */
